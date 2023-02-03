@@ -26,11 +26,9 @@ body {
 }
 
 .result span {
-  margin-right: 60px;
+  margin-right: 20px;
   font-size: 100px;
   align-self: center;
-
-  padding: 20px;
 }
 
 .buttons {
@@ -53,10 +51,10 @@ body {
   background-color: rgb(62, 62, 62);
 }
 
-.btn:hover{
-    background-color: gray;
-    font-size: 40px;
-    transition: 200ms;
+.btn:active {
+  background-color: rgba(255, 255, 255, 0.591);
+  font-size: 40px;
+  transition: 200ms;
 }
 .clear {
   color: red;
