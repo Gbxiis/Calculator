@@ -8,56 +8,57 @@ let lastput;
 let operator = "";
 
 const percent = () => {
-    if(output != ''){
-      firstput = +firstput / 100;
-      overview(firstput)
-    }
-    input = (+input / 100).toString();
-    overview(input)
-    operator = ""
-}
+  if (output != '') {
+    firstput = +firstput / 100;
+    overview(firstput);
+  }
+  input = (+input / 100).toString();
+  overview(input);
+  operator = '';
+};
 
 const minus = () => {
-  if(output != ''){
-    firstput = +firstput * -1
-    overview(firstput)
+  if (output != '') {
+    firstput = +firstput * -1;
+    overview(firstput);
   }
-  input = (+input * -1).toString()
-  overview(input)
+  input = (+input * -1).toString();
+  overview(input);
 
-  operator - ''
-}
+  operator - '';
+};
 
 const clear = () => {
-  input = "";
+  input = '';
   firstput = null;
   lastput = null;
-  operator = "";
-  result.textContent = ""
+  operator = '';
+  result.textContent = '';
 };
 
-const overview = (res) => {
-  result.textContent = res;
-};
-const  overviewfirstSecondNum = () => {
-  if(firstput){
-    lastput = input;
-  }else{
-    firstput = +input
+const overviewfirstSecondNum = () => {
+  if (firstput) {
+    lastput = +input;
+  } else {
+    firstput = +input;
   }
-  input = ''
-}
+  input = '';
+};
 const calculater = () => {
   switch (operator) {
     case "+":
-      firstput + lastput;
+      return firstput + lastput;
     case "-":
-      firstput - lastput;
+      return firstput - lastput;
     case "x":
-      firstput * lastput;
+      return firstput * lastput;
     case "÷":
-      firstput / lastput;
+      return firstput / lastput;
   }
+};
+
+const overview = (output) => {
+  result.textContent = output;
 };
 
 numbers.forEach((number) => {
@@ -72,23 +73,25 @@ numbers.forEach((number) => {
       overview(input);
     }
     if (id === "operation") {
-        value !== '=' ? operator = value : null
+      value !== "=" ? (operator = value) : null;
 
       if (value === "+/–") {
-        minus()
+        minus();
       } else if (value === "%") {
-        percent()
+        percent();
       } else {
-        operator == +"C" && clear();
+        operator === "C" && clear();
+
         overviewfirstSecondNum();
         overview(input);
-        if(value === "=" && !lastput) return;
+
+        if (value === "=" && !lastput) return;
         if (value === "=" && firstput && lastput) {
-          result = calculater();
-          firstput = result;
-          input = result;
+          output = calculater();
+          firstput = output;
+          input = output;
           lastput = null;
-          overview(result);
+          overview(output);
         }
       }
     }
