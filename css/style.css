@@ -61,4 +61,5 @@ body {
 }
 .equal {
   background-color: gray;
+  grid-template-columns: ;
 }

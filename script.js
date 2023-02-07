@@ -7,33 +7,34 @@ let firstput;
 let lastput;
 let operator = "";
 
+
 const percent = () => {
-  if (output != '') {
+  if (output != "") {
     firstput = +firstput / 100;
     overview(firstput);
   }
   input = (+input / 100).toString();
   overview(input);
-  operator = '';
+  operator = "";
 };
 
 const minus = () => {
-  if (output != '') {
+  if (output != "") {
     firstput = +firstput * -1;
     overview(firstput);
   }
   input = (+input * -1).toString();
   overview(input);
 
-  operator - '';
+  operator - "";
 };
 
 const clear = () => {
-  input = '';
+  input = "";
   firstput = null;
   lastput = null;
-  operator = '';
-  result.textContent = '';
+  operator = "";
+  result.textContent = "";
 };
 
 const overviewfirstSecondNum = () => {
@@ -42,7 +43,7 @@ const overviewfirstSecondNum = () => {
   } else {
     firstput = +input;
   }
-  input = '';
+  input = "";
 };
 const calculater = () => {
   switch (operator) {
