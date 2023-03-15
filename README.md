@@ -3,6 +3,8 @@
 
 # Sobre o projeto
 
+https://calculatorgb.netlify.app/
+
  Calculator é uma aplicação web simples de interface gráfica que tem como objetivo simular uma calculadora de celular. Essa aplicação é construída utilizando a linguagem de programação JavaScript.
  Ao utilizar a Calculator, o usuário tem acesso a uma interface que replica as funções de uma calculadora convencional, permitindo a realização de operações matemáticas básicas, como soma, subtração, multiplicação e divisão. Além disso, a aplicação pode conter outras funcionalidades.
 
